@@ -8,7 +8,7 @@ module.exports = (pool) => {
           let querySearch = req.query.search;
           let sqlSelect = 'SELECT * FROM users';
           if (querySearch != 'null') {
-              sqlSelect += ` WHERE nama LIKE '%${querySearch}%'`;
+              sqlSelect += ` WHERE lower(nama) LIKE '%${querySearch.toLowerCase()}%'`;
           }
           pool.query(sqlSelect, function (err,response) {
               if (err) {

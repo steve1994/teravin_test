@@ -50,63 +50,84 @@ export default function Add() {
                 <Form layout={'horizontal'} form={form} name="add-new-user" onFinish={submitNewUser}>
                     <Row style={{paddingBottom:'10px',paddingLeft:'30px',paddingRight:'30px'}}>
                         <Col span={24}>
-                            <Form.Item
-                                name="nama"
-                                label={<strong>Nama</strong>}
-                                rules={[
-                                    {
-                                        required: true,
-                                        message: 'Nama should not be empty!'
-                                    },
-                                    {
-                                        max: 50,
-                                        message: 'Nama can only have 50 maximum characters!'
-                                    }
-                                ]}>
-                                <Input placeholder="Nama" style={{width:'70%'}} />
-                            </Form.Item>
+                            <div className="row">
+                                <div className="col-9">
+                                    <Form.Item
+                                        name="nama"
+                                        label={<strong>Nama</strong>}
+                                        labelCol={{span:3}}
+                                        labelAlign={"left"}
+                                        colon={false}
+                                        rules={[
+                                            {
+                                                required: true,
+                                                message: 'Nama should not be empty!'
+                                            },
+                                            {
+                                                max: 50,
+                                                message: 'Nama can only have 50 maximum characters!'
+                                            }
+                                        ]}>
+                                        <Input placeholder="Nama" style={{width:'100%'}} />
+                                    </Form.Item>
+                                </div>
+                            </div>
                         </Col>
                     </Row>
                     <Row style={{paddingBottom:'10px',paddingLeft:'30px',paddingRight:'30px'}}>
                         <Col span={24}>
-                            <Form.Item
-                                name="hp"
-                                label={<strong>No HP</strong>}
-                                rules={[
-                                    {
-                                        required : true,
-                                        message : 'No HP should not be empty!'
-                                    },
-                                    {
-                                        min : 10,
-                                        message : 'No HP should contain minimum 10 digits'
-                                    },
-                                    {
-                                        pattern : "^[0-9]{10,}$",
-                                        message : 'No HP should contain digits only!'
-                                    }
-                                ]}>
-                                  <Input placeholder="No HP" style={{width:'70%'}}/>
-                            </Form.Item>
+                            <div className="row">
+                                <div className="col-9">
+                                    <Form.Item
+                                        name="hp"
+                                        label={<strong>No HP</strong>}
+                                        labelCol={{span:3}}
+                                        labelAlign={"left"}
+                                        colon={false}
+                                        rules={[
+                                            {
+                                                required : true,
+                                                message : 'No HP should not be empty!'
+                                            },
+                                            {
+                                                min : 10,
+                                                message : 'No HP should contain minimum 10 digits'
+                                            },
+                                            {
+                                                pattern : "^[0-9]{10,}$",
+                                                message : 'No HP should contain digits only!'
+                                            }
+                                        ]}>
+                                          <Input placeholder="No HP" style={{width:'100%'}}/>
+                                    </Form.Item>
+                                </div>
+                            </div>
                         </Col>
                     </Row>
                     <Row style={{paddingBottom:'10px',paddingLeft:'30px',paddingRight:'30px'}}>
                         <Col span={24}>
-                            <Form.Item
-                                name="email"
-                                label={<strong>Email</strong>}
-                                rules={[
-                                    {
-                                        required: true,
-                                        message: 'Email should not be empty!'
-                                    },
-                                    {
-                                        type: 'email',
-                                        message: 'Use format email xxxx@xxx.xxx!'
-                                    }
-                                ]}>
-                                <Input placeholder="Email" style={{width:'70%'}}/>
-                            </Form.Item>
+                            <div className="row">
+                                <div className="col-9">
+                                    <Form.Item
+                                        name="email"
+                                        label={<strong>Email</strong>}
+                                        labelCol={{span:3}}
+                                        labelAlign={"left"}
+                                        colon={false}
+                                        rules={[
+                                            {
+                                                required: true,
+                                                message: 'Email should not be empty!'
+                                            },
+                                            {
+                                                type: 'email',
+                                                message: 'Use format email xxxx@xxx.xxx!'
+                                            }
+                                        ]}>
+                                        <Input placeholder="Email" style={{width:'100%'}}/>
+                                    </Form.Item>
+                                </div>
+                            </div>
                         </Col>
                     </Row>
                     <Row style={{paddingBottom:'30px',paddingLeft:'30px',paddingRight:'30px'}}>
@@ -119,6 +140,9 @@ export default function Add() {
                                                 <Form.Item
                                                     name={`alamat${index}`}
                                                     label={<strong>{`Alamat ${index+1}`}</strong>}
+                                                    labelCol={{span:3}}
+                                                    labelAlign={"left"}
+                                                    colon={false}
                                                     rules={[
                                                         {
                                                             required: true,

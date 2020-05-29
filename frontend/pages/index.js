@@ -51,7 +51,7 @@ export default function Home() {
                         </Row>
                         <Row className="py-3" align="middle">
                             <Col span={24}>
-                                <Table columns={columnIndex} dataSource={dataUser} />
+                                <Table columns={columnIndex} pagination={{defaultPageSize:6}} dataSource={dataUser} />
                             </Col>
                         </Row>
                     </div>
